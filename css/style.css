@@ -202,24 +202,6 @@ body {
   grid-row-gap: 0px;
 }
 
-/* Клиенты и партнёры */
-
-.clients {
-  padding: 0 100px 130px 100px;
-}
-
-.clients-content {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
-}
-
-.client {
-
-}
-
 /* Кейсы */
 
 .cases {
@@ -343,6 +325,32 @@ body {
   font-size: 15px;
   line-height: 18px;
   color: #FFFFFF;
+}
+
+/* Клиенты и партнёры */
+
+.clients {
+  padding: 0 100px 130px 100px;
+}
+
+.clients-content {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(2, 190px);
+  grid-column-gap: 20px;
+  grid-row-gap: 15px;
+}
+
+.client {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.client p {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 36px;
 }
 
 /* Общее */
