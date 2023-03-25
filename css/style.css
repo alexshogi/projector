@@ -353,6 +353,36 @@ body {
   line-height: 36px;
 }
 
+/* Цена */
+
+.price {
+  padding: 0 100px 130px 100px;
+}
+
+.price h3 {
+  font-weight: 500;
+  font-size: 50px;
+  line-height: 63px;
+  color: #FFFFFF;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.price-content {
+  text-align: center;
+}
+
+.price-content p {
+  font-weight: 300;
+  font-size: 23px;
+  line-height: 29px;
+  color: #FFFFFF;
+}
+
+.price-content .button {
+  margin: 50px auto 0 auto;
+}
+
 /* Общее */
 
 h2 {
@@ -375,4 +405,17 @@ h2 {
 
 .text-black {
   color: var(--text-black) !important;
+}
+
+.button {
+  background-color: var(--background-greygreen);
+  color: var(--text-white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 14px 65px;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 31px;
+  width: fit-content;
 }
