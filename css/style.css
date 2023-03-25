@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "MB Druzba";
+  src: url("../fonts/MB_Druzba-Regular-L.ttf") format("ttf");
+}
+
 body {
   background-color: var(--background-black);
   color: var(--text-white);
@@ -162,6 +167,7 @@ body {
 /* Общее */
 
 h2 {
+  font-family: "MB Druzba";
   font-weight: 400;
   font-size: 115px;
   line-height: 120px;
