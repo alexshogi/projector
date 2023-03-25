@@ -400,6 +400,27 @@ body {
 
 .request {
   padding: 0 100px 130px 100px;
+  display: flex;
+  flex-direction: row;
+}
+
+.request .info {
+  flex: 1;
+}
+
+.request .info h2 {
+  font-weight: 400;
+  font-size: 90px;
+  line-height: 78px;
+  margin-bottom: 50px;
+}
+
+.request .info .socials {
+  
+}
+
+.request .form {
+  flex: 1;
 }
 
 /* Общее */
