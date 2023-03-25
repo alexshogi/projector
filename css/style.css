@@ -258,7 +258,8 @@ body {
 .case .case-number {
   font-weight: 300;
   font-size: 80px;
-  line-height: 101px;
+  line-height: 80px;
+  margin-top: 12px;
   color: #FFFFFF;
 }
 
