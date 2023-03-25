@@ -383,6 +383,25 @@ body {
   margin: 50px auto 0 auto;
 }
 
+/* Видео */
+
+.video {
+  padding: 0 100px 130px 100px;
+}
+
+.video-container {
+  border: 2px solid #FFFFFF;
+  width: 100%;
+  padding-top: 56.25%;
+  position: relative;
+}
+
+/* Давайте сделаем проект вместе */
+
+.request {
+  padding: 0 100px 130px 100px;
+}
+
 /* Общее */
 
 h2 {
