@@ -1,0 +1,183 @@
+body {
+  background-color: var(--background-black);
+  color: var(--text-white);
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  height: 100%;
+}
+
+.howwedo-content {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+/* Клиенты и партнёры */
+
+.clients {
+  padding: 0 100px 130px 100px;
+}
+
+.clients-content {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.client {
+
+}
+
+/* Кейсы */
+
+.cases {
+  padding: 0 100px 130px 100px;
+}
+
+.cases-content {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 250px);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.case {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.case.case-border {
+  border: 1px solid #FFFFFF;
+}
+
+.case p {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 26px;
+  color: #FFFFFF;
+}
+
+.case .case-number {
+  font-weight: 300;
+  font-size: 80px;
+  line-height: 101px;
+  color: #FFFFFF;
+}
+
+/* Как мы работаем */
+
+.howwedo {
+  padding: 0 100px 180px 100px;
+}
+
+.howwedo-content {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 20px;
+  grid-row-gap: 55px;
+}
+
+.howwedo-item h3 {
+  font-weight: 300;
+  font-size: 80px;
+  line-height: 101px;
+  color: #FFFFFF;
+  margin-bottom: 16px;
+}
+
+.howwedo-item h4 {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 25px;
+  color: #FFFFFF;
+  text-transform: uppercase;
+}
+
+.howwedo-item p {
+  font-weight: 300;
+  font-size: 19px;
+  line-height: 27px;
+  color: #FFFFFF;
+  opacity: 0.8;
+}
+
+/* Команда */
+
+.team {
+  padding: 0 100px 130px 100px;
+}
+
+.team-content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 24px;
+  grid-row-gap: 20px;
+}
+
+.team-member {
+  width: 100%;
+  height: 160px;
+  border: 2px solid #FFFFFF;
+}
+
+.team-member img {
+  flex: 1;
+  border-right: 1px solid #FFFFFF;
+}
+
+.team-member-info {
+  flex: 1;
+  padding: 8px;
+}
+
+.team-member-info h4 {
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 32px;
+  color: #FFFFFF;
+}
+
+.team-member-info p {
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 18px;
+  color: #FFFFFF;
+}
+
+/* Общее */
+
+h2 {
+  font-weight: 400;
+  font-size: 115px;
+  line-height: 120px;
+  color: #FFFFFF;
+  margin-bottom: 100px;
+  text-transform: uppercase;
+}
+
+.background-greygreen {
+  background-color: var(--background-greygreen);
+}
+
+.background-white {
+  background-color: var(--background-white);
+}
+
+.text-black {
+  color: var(--text-black) !important;
+}
