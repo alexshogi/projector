@@ -197,16 +197,30 @@ body {
 /* Услуги */
 
 .services {
-  padding: 130px 100px;
+  padding: 130px 100px 0 130px;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  position: relative;
+  min-height: 1000px;
+}
+
+.services:before {
+  display: block;
+  position: absolute;
+  width: 2px;
+  height: 100%;
+  left: 100px;
+  top: 0;
+  content: "";
+  background-color: #FFFFFF;
 }
 
 .services-content {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  padding-left: 20px;
 }
 
 .services-content .info {
