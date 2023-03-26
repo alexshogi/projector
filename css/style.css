@@ -507,6 +507,49 @@ body {
   padding-bottom: 12px;
 }
 
+/* Подвал */
+
+.site-footer {
+  padding: 150px 100px;
+  background-color: var(--background-greygreen);
+}
+
+.site-footer h3 {
+  font-family: 'MB Druzba';
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 30px;
+  color: #FFFFFF;
+}
+
+.site-footer-content {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 50px;
+}
+
+.site-footer-content .features ul li a {
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 28px;
+  color: #FFFFFF;
+}
+
+.site-footer-content .contacts {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.site-footer-content .contacts a {
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 26px;
+  text-align: right;
+  color: #FFFFFF;
+}
+
 /* Общее */
 
 a {
@@ -554,4 +597,10 @@ h2 {
 
 .button:hover {
   border: 1px solid #FFFFFF;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
