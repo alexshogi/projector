@@ -199,10 +199,6 @@ body {
 .site-header {
   padding: 75px 100px;
   position: relative;
-  background-image: url(../images/video-background.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
   height: calc(100vh - 200px);
 }
 
@@ -371,6 +367,13 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  transition: all 0.24s;
+  cursor: pointer;
+}
+
+.case:not(.static):hover {
+  transform: scale(1.05);
+  z-index: 2;
 }
 
 .case.case-border {
