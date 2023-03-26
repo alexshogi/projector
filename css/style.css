@@ -197,11 +197,33 @@ body {
 /* Услуги */
 
 .services {
-  padding: 0 100px 130px 100px;
+  padding: 130px 100px;
 }
 
 .services-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
 
+.services-content .info {
+  flex: 1;
+}
+
+.services-content .info h2 {
+  line-height: 70px;
+}
+
+.services-content .menu {
+  flex: 1;
+}
+
+.services-content .menu h4 {
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 32px;
+  color: #FFFFFF;
+  margin-bottom: 50px;
 }
 
 /* Кейсы */
