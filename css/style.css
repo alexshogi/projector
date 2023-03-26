@@ -451,6 +451,48 @@ body {
 
 .request .form {
   flex: 1;
+  border: 1px solid #FFFFFF;
+  padding: 48px 40px;
+}
+
+.request .form p {
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 28px;
+  color: #FFFFFF;
+  margin-bottom: 28px;
+}
+
+.request .form input {
+  width: 100%;
+  box-sizing: border-box;
+  height: 30px;
+  margin-bottom: 20px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  color: #FFFFFF;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 28px;
+}
+
+.request .form input:last-of-type {
+  margin-bottom: 96px;
+}
+
+.request .form input:focus {
+  outline: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.65);
+}
+
+.request .form .button {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 28px;
+  width: 100%;
+  padding-top: 12px;
+  padding-bottom: 12px;
 }
 
 /* Общее */
