@@ -232,7 +232,10 @@ body {
 }
 
 .site-header-content {
-
+  position: absolute;
+  z-index: 3;
+  left: 100px;
+  width: calc(100% - 200px);
 }
 
 .site-header-content .header-nav {
