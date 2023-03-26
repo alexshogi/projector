@@ -194,12 +194,14 @@ body {
   height: 100%;
 }
 
-.howwedo-content {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
+/* Услуги */
+
+.services {
+  padding: 0 100px 130px 100px;
+}
+
+.services-content {
+
 }
 
 /* Кейсы */
