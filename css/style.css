@@ -445,8 +445,20 @@ body {
   margin-bottom: 50px;
 }
 
-.request .info .socials {
+.request .info .socials .social-link {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 34px;
+  height: 34px;
+  border: 0.5px solid rgba(255, 255, 255, 0.75);
+  margin-right: 30px;
+  transition: all 0.24s;
+}
 
+.request .info .socials .social-link:hover {
+  background-color: var(--background-greygreen);
+  border: 0.5px solid rgba(255, 255, 255, 0.45);
 }
 
 .request .form {
@@ -496,6 +508,10 @@ body {
 }
 
 /* Общее */
+
+a {
+  text-decoration: none;
+}
 
 h2 {
   font-family: "MB Druzba";
