@@ -215,6 +215,21 @@ body {
 
 .services-content .info h2 {
   line-height: 70px;
+  margin-bottom: 95px;
+}
+
+.services-content .info ul {
+  display: none;
+}
+
+.services-content .info ul li {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 26px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  opacity: 0.7;
+  margin-bottom: 30px;
 }
 
 .services-content .menu {
