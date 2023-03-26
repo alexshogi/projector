@@ -367,8 +367,8 @@ body {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(2, 190px);
-  grid-column-gap: 20px;
-  grid-row-gap: 15px;
+  grid-column-gap: 25px;
+  grid-row-gap: 20px;
 }
 
 .client {
@@ -478,6 +478,7 @@ h2 {
 }
 
 .button {
+  box-sizing: border-box;
   background-color: var(--background-greygreen);
   color: var(--text-white);
   display: flex;
@@ -488,4 +489,11 @@ h2 {
   font-size: 25px;
   line-height: 31px;
   width: fit-content;
+  cursor: pointer;
+  transition: all 0.24s;
+  border: 1px solid transparent;
+}
+
+.button:hover {
+  border: 1px solid #FFFFFF;
 }
