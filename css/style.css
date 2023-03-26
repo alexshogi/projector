@@ -194,15 +194,87 @@ body {
   height: 100%;
 }
 
+/* Шапка */
+
+.site-header {
+  padding: 75px 100px;
+  position: relative;
+  background-image: url(../images/video-background.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: calc(100vh - 200px);
+}
+
+.site-header:before {
+  display: block;
+  position: absolute;
+  width: 2px;
+  height: 100%;
+  left: 100px;
+  top: 0;
+  content: "";
+  background-color: #FFFFFF;
+  box-shadow: 1px 0 0 0 rgba(255, 255, 255, 0.5);
+  z-index: 2;
+}
+
+.site-header video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+  filter: grayscale(50%) brightness(0.5);
+}
+
+.header-cross {
+  position: absolute;
+  left: 3px;
+  top: 0;
+  z-index: 2;
+}
+
+.site-header-content {
+
+}
+
+.site-header-content .header-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.site-header-content .header-nav a {
+  display: inline-flex;
+  font-family: 'MB Druzba';
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 17px;
+  color: #E9E9E9;
+  padding: 8px 16px;
+  margin: 0 9px;
+  transition: all 0.24s;
+  border-bottom: 1px solid transparent;
+}
+
+.site-header-content .header-nav a:hover {
+  font-weight: 500;
+  color: #FFFFFF;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.45);
+}
+
 /* Услуги */
 
 .services {
-  padding: 130px 100px 0 130px;
+  padding: 130px 100px 0 100px;
+  margin-bottom: 130px;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   position: relative;
   min-height: 1000px;
+  border-bottom: 2px solid #FFFFFF;
 }
 
 .services:before {
@@ -214,6 +286,7 @@ body {
   top: 0;
   content: "";
   background-color: #FFFFFF;
+  box-shadow: 1px 0 0 0 rgba(255, 255, 255, 0.5);
 }
 
 .services-content {

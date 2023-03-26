@@ -1,3 +1,10 @@
+// Видео в шапке
+const headerVideo = document.getElementById('site-header-video');
+
+headerVideo.load();
+headerVideo.play();
+
+// Услуги
 const serviceButtons = document.querySelectorAll('[data-type="service-btn"]');
 const serviceLists = document.querySelectorAll('[data-type="service-list"]');
 const servicesBlock = document.querySelector('.services');
