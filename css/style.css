@@ -216,6 +216,7 @@ body {
 
 .services-content .menu {
   flex: 1;
+  padding-left: 50px;
 }
 
 .services-content .menu h4 {
@@ -224,6 +225,23 @@ body {
   line-height: 32px;
   color: #FFFFFF;
   margin-bottom: 50px;
+}
+
+.services-content .menu ul li {
+  font-weight: 300;
+  font-size: 35px;
+  line-height: 45px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  opacity: 0.7;
+  margin-bottom: 25px;
+  cursor: pointer;
+  transition: all 0.24s;
+}
+
+.services-content .menu ul li:hover {
+  font-weight: 500;
+  opacity: 1;
 }
 
 /* Кейсы */
