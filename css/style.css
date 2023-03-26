@@ -198,6 +198,9 @@ body {
 
 .services {
   padding: 130px 100px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .services-content {
