@@ -9,7 +9,6 @@ const serviceButtons = document.querySelectorAll('[data-type="service-btn"]');
 const serviceLists = document.querySelectorAll('[data-type="service-list"]');
 const servicesBlock = document.querySelector('.services');
 
-
 for (const serviceButton of serviceButtons) {
   serviceButton.addEventListener('click', function() {
     const value = serviceButton.dataset.value;
@@ -28,8 +27,29 @@ for (const serviceButton of serviceButtons) {
 //  Кейсы
 
 const modalContainer = document.getElementById('cases-modal-container');
+const casesElems = document.querySelectorAll('.case');
+
+const heading = document.getElementById('case-heading');
+const about = document.getElementById('case-about');
+const objective = document.getElementById('case-objective');
+const solution = document.getElementById('case-solution');
+
+for (const caseElem of casesElems) {
+  caseElem.addEventListener('click', function() {
+    const value = caseElem.dataset.value;
+
+    const caseInfo = cases.find(c => c.value === `case${value}`);
+
+    heading.innerText = caseInfo.title;
+    about.innerText = caseInfo.about;
+    objective.innerText = caseInfo.objective;
+    solution.innerText = caseInfo.solution;
+
+    modalContainer.style.display = 'block';
+  });
+}
 
 // modalContainer.style.display = "block"
 // modalContainer.style.display = "none"
 
-console.log(cases);
+console.log(casesElems);

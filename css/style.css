@@ -413,6 +413,7 @@ body {
   background-repeat: no-repeat;
   transition: all 0.24s;
   cursor: pointer;
+  user-select: none;
 }
 
 .case:not(.static):hover {
@@ -429,13 +430,15 @@ body {
   font-size: 20px;
   line-height: 26px;
   color: #FFFFFF;
+  margin: 8px 0;
 }
 
 .case .case-number {
   font-weight: 300;
   font-size: 80px;
-  line-height: 80px;
-  margin-top: 12px;
+  line-height: 60px;
+  margin: 0;
+  margin-top: 10px;
   color: #FFFFFF;
 }
 
@@ -480,7 +483,7 @@ body {
   grid-row-gap: 10px;
 }
 
-.cases-modal-content .cases-modal-text-block h5 {
+.cases-modal-text-block h5 {
   font-weight: 700;
   font-size: 20px;
   line-height: 26px;
@@ -488,7 +491,7 @@ body {
   margin-top: 0;
 }
 
-.cases-modal-content .cases-modal-text-block p {
+.cases-modal-text-block p {
   font-weight: 300;
   font-size: 20px;
   line-height: 26px;
