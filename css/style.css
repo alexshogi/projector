@@ -242,6 +242,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 36px;
 }
 
 .site-header-content .header-nav a {
@@ -261,6 +262,45 @@ body {
   font-weight: 500;
   color: #FFFFFF;
   border-bottom: 1px solid rgba(255, 255, 255, 0.45);
+}
+
+.header-text-content {
+  position: absolute;
+  padding: 50px;
+}
+
+.header-text-content img {
+  margin-bottom: 20px;
+}
+
+.header-text-content .header-text {
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 32px;
+  color: #FFFFFF;
+  margin-bottom: 150px;
+}
+
+.header-text-content .header-contacts {
+  display: flex;
+  flex-direction: column;
+}
+
+.header-text-content .header-contacts a {
+  font-weight: 300;
+  font-size: 25px;
+  line-height: 32px;
+  color: #FFFFFF;
+  transition: all 0.24s;
+}
+
+.header-text-content .header-contacts a:first-of-type {
+  margin-bottom: 10px;
+}
+
+.header-text-content .header-contacts a:hover {
+  font-weight: 500;
+  color: #FFFFFF;
 }
 
 /* Услуги */
