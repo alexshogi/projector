@@ -24,3 +24,12 @@ for (const serviceButton of serviceButtons) {
     list.style.display = 'unset';
   });
 }
+
+//  Кейсы
+
+const modalContainer = document.getElementById('cases-modal-container');
+
+// modalContainer.style.display = "block"
+// modalContainer.style.display = "none"
+
+console.log(cases);

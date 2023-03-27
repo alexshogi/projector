@@ -392,6 +392,7 @@ body {
 
 .cases {
   padding: 0 100px 130px 100px;
+  position: relative;
 }
 
 .cases-content {
@@ -436,6 +437,97 @@ body {
   line-height: 80px;
   margin-top: 12px;
   color: #FFFFFF;
+}
+
+.cases-modal-container {
+  position: fixed;
+  /* display: none; */
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 45;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 30px;
+}
+
+.cases-modal {
+  box-sizing: border-box;
+  position: absolute;
+  z-index: 50;
+  top: 50%;
+  left: 50%;
+  max-width: 1380px;
+  max-height: 90vh;
+  margin: 0 auto;
+  width: calc(100vw - 60px);
+  background-color: #141414;
+  color: #FFFFFF;
+  padding: 70px 90px;
+  transform: translate(calc(-50% - 30px), calc(-50% - 30px));
+  cursor: pointer;
+  animation-name: modalAnimation;
+  animation-duration: 0.4s;
+  overflow-y: auto;
+}
+
+.cases-modal .cases-modal-text-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1;
+  grid-column-gap: 30px;
+  grid-row-gap: 10px;
+}
+
+.cases-modal-content .cases-modal-text-block h5 {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 26px;
+  margin-bottom: 10px;
+}
+
+.cases-modal-content .cases-modal-text-block p {
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 26px;
+}
+
+.cases-modal .cases-modal-images {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(6, minmax(100px, 340px));
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+}
+
+.cases-modal-images div {
+  overflow: hidden;
+}
+
+.cases-modal-images div img {
+  height: 100%;
+}
+
+.image-1 { grid-area: 1 / 1 / 3 / 6; }
+.image-2 { grid-area: 1 / 6 / 2 / 13; }
+.image-3 { grid-area: 2 / 6 / 3 / 13; }
+.image-4 { grid-area: 3 / 1 / 5 / 9; }
+.image-5 { grid-area: 4 / 9 / 5 / 13; }
+.image-6 { grid-area: 3 / 9 / 4 / 13; }
+.image-7 { grid-area: 5 / 1 / 7 / 13; }
+
+@keyframes modalAnimation {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+
+  to {
+    top: 50%;
+    opacity: 1;
+  }
 }
 
 /* Как мы работаем */
