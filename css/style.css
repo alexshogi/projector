@@ -468,11 +468,20 @@ body {
   background-color: #141414;
   color: #FFFFFF;
   padding: 70px 90px;
+  padding-top: 0;
   transform: translate(calc(-50% - 30px), calc(-50% - 30px));
-  cursor: pointer;
   animation-name: modalAnimation;
   animation-duration: 0.4s;
   overflow-y: auto;
+}
+
+.case-heading {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 51px;
+  color: #FFFFFF;
+  margin-bottom: 30px;
+  margin-top: 0;
 }
 
 .cases-modal .cases-modal-text-content {

@@ -34,6 +34,14 @@ const about = document.getElementById('case-about');
 const objective = document.getElementById('case-objective');
 const solution = document.getElementById('case-solution');
 
+const image1 = document.getElementById('case-image-1');
+const image2 = document.getElementById('case-image-2');
+const image3 = document.getElementById('case-image-3');
+const image4 = document.getElementById('case-image-4');
+const image5 = document.getElementById('case-image-5');
+const image6 = document.getElementById('case-image-6');
+const image7 = document.getElementById('case-image-7');
+
 for (const caseElem of casesElems) {
   caseElem.addEventListener('click', function() {
     const value = caseElem.dataset.value;
@@ -44,6 +52,14 @@ for (const caseElem of casesElems) {
     about.innerText = caseInfo.about;
     objective.innerText = caseInfo.objective;
     solution.innerText = caseInfo.solution;
+
+    image1.src = caseInfo.image1;
+    image2.src = caseInfo.image2;
+    image3.src = caseInfo.image3;
+    image4.src = caseInfo.image4;
+    image5.src = caseInfo.image5;
+    image6.src = caseInfo.image6;
+    image7.src = caseInfo.image7;
 
     modalContainer.style.display = 'block';
   });
