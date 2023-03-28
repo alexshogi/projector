@@ -311,9 +311,11 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  background-image: url(../images/services/forums.png);
   position: relative;
   min-height: 1000px;
   border-bottom: 2px solid #FFFFFF;
+  transition: all 0.4s;
 }
 
 .services:before {
@@ -384,6 +386,11 @@ body {
 }
 
 .services-content .menu ul li:hover {
+  font-weight: 500;
+  opacity: 1;
+}
+
+.services-content .menu ul li.active {
   font-weight: 500;
   opacity: 1;
 }

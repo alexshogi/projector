@@ -9,6 +9,9 @@ const serviceButtons = document.querySelectorAll('[data-type="service-btn"]');
 const serviceLists = document.querySelectorAll('[data-type="service-list"]');
 const servicesBlock = document.querySelector('.services');
 
+// const firstList = document.querySelector(`[data-type="service-list"][data-value="${1}"]`);
+// firstList.style.display = 'unset';
+
 for (const serviceButton of serviceButtons) {
   serviceButton.addEventListener('click', function() {
     const value = serviceButton.dataset.value;
@@ -16,6 +19,31 @@ for (const serviceButton of serviceButtons) {
     serviceLists.forEach(list => {
       list.style.display = 'none';
     })
+
+    serviceButtons.forEach(btn => {
+      btn.classList.remove('active');
+    })
+
+    serviceButton.classList.add('active');
+
+    const list = document.querySelector(`[data-type="service-list"][data-value="${value}"]`);
+
+    servicesBlock.style.backgroundImage = `url(./images/services/${value}.png)`;
+    list.style.display = 'unset';
+  });
+
+  serviceButton.addEventListener('mouseover', function() {
+    const value = serviceButton.dataset.value;
+
+    serviceLists.forEach(list => {
+      list.style.display = 'none';
+    })
+
+    serviceButtons.forEach(btn => {
+      btn.classList.remove('active');
+    })
+
+    serviceButton.classList.add('active');
 
     const list = document.querySelector(`[data-type="service-list"][data-value="${value}"]`);
 
