@@ -30,6 +30,7 @@ const modalContainer = document.getElementById('cases-modal-container');
 const casesElems = document.querySelectorAll('.case');
 
 const heading = document.getElementById('case-heading');
+const modalCloseBtn = document.getElementById('case-modal-close');
 const about = document.getElementById('case-about');
 const objective = document.getElementById('case-objective');
 const solution = document.getElementById('case-solution');
@@ -41,6 +42,10 @@ const image4 = document.getElementById('case-image-4');
 const image5 = document.getElementById('case-image-5');
 const image6 = document.getElementById('case-image-6');
 const image7 = document.getElementById('case-image-7');
+
+modalCloseBtn.addEventListener('click', function() {
+  modalContainer.style.display = 'none';
+})
 
 for (const caseElem of casesElems) {
   caseElem.addEventListener('click', function() {

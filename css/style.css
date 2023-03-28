@@ -475,6 +475,16 @@ body {
   overflow-y: auto;
 }
 
+.cases-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.cases-modal-header .close-btn {
+  margin-top: 50px;
+}
+
 .case-heading {
   font-weight: 700;
   font-size: 40px;
@@ -901,4 +911,33 @@ ul {
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+.close-btn {
+  height: 30px;
+  width: 30px;
+  position: relative;
+  cursor: pointer;
+}
+
+.close-btn:before {
+  display: block;
+  position: absolute;
+  content: "";
+  left: 14px;
+  width: 2px;
+  height: 30px;
+  background-color: #FFFFFF;
+  transform: rotateZ(45deg);
+}
+
+.close-btn:after {
+  display: block;
+  position: absolute;
+  content: "";
+  left: 14px;
+  width: 2px;
+  height: 30px;
+  background-color: #FFFFFF;
+  transform: rotateZ(-45deg);
 }
