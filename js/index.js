@@ -31,6 +31,7 @@ const casesElems = document.querySelectorAll('.case');
 
 const heading = document.getElementById('case-heading');
 const modalCloseBtn = document.getElementById('case-modal-close');
+const nextCaseBtn = document.getElementById('next-case');
 const about = document.getElementById('case-about');
 const objective = document.getElementById('case-objective');
 const solution = document.getElementById('case-solution');
@@ -47,24 +48,46 @@ modalCloseBtn.addEventListener('click', function() {
   modalContainer.style.display = 'none';
 })
 
+let value = 0;
+
+const fillContent = function() {
+  console.log(887, value)
+  const caseInfo = cases.find(c => c.value === `case${value}`);
+
+  heading.innerText = caseInfo.title;
+  about.innerText = caseInfo.about;
+  objective.innerText = caseInfo.objective;
+  solution.innerText = caseInfo.solution;
+
+  image1.src = caseInfo.image1;
+  image2.src = caseInfo.image2;
+  image3.src = caseInfo.image3;
+  image4.src = caseInfo.image4;
+  image5.src = caseInfo.image5;
+  image6.src = caseInfo.image6;
+  image7.src = caseInfo.image7;
+
+  if (value >= 9) {
+    nextCaseBtn.style.display = 'none';
+  } else {
+    nextCaseBtn.style.display = 'block';
+  }
+}
+
+nextCaseBtn.addEventListener('click', function() {
+  value += 1;
+  fillContent();
+
+  heading.scrollIntoView({
+    behavior: 'smooth'
+  });
+})
+
 for (const caseElem of casesElems) {
   caseElem.addEventListener('click', function() {
-    const value = caseElem.dataset.value;
+    value = +caseElem.dataset.value;
 
-    const caseInfo = cases.find(c => c.value === `case${value}`);
-
-    heading.innerText = caseInfo.title;
-    about.innerText = caseInfo.about;
-    objective.innerText = caseInfo.objective;
-    solution.innerText = caseInfo.solution;
-
-    image1.src = caseInfo.image1;
-    image2.src = caseInfo.image2;
-    image3.src = caseInfo.image3;
-    image4.src = caseInfo.image4;
-    image5.src = caseInfo.image5;
-    image6.src = caseInfo.image6;
-    image7.src = caseInfo.image7;
+    fillContent();
 
     modalContainer.style.display = 'block';
   });

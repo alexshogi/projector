@@ -467,8 +467,7 @@ body {
   width: calc(100vw - 60px);
   background-color: #141414;
   color: #FFFFFF;
-  padding: 70px 90px;
-  padding-top: 0;
+  padding: 50px 90px 10px 90px;
   transform: translate(calc(-50% - 30px), calc(-50% - 30px));
   animation-name: modalAnimation;
   animation-duration: 0.4s;
@@ -482,7 +481,7 @@ body {
 }
 
 .cases-modal-header .close-btn {
-  margin-top: 50px;
+  margin-top: 28px;
 }
 
 .case-heading {
@@ -491,7 +490,7 @@ body {
   line-height: 51px;
   color: #FFFFFF;
   margin-bottom: 30px;
-  margin-top: 0;
+  margin-top: 20px;
 }
 
 .cases-modal .cases-modal-text-content {
@@ -540,6 +539,13 @@ body {
 .image-5 { grid-area: 4 / 9 / 5 / 13; }
 .image-6 { grid-area: 3 / 9 / 4 / 13; }
 .image-7 { grid-area: 5 / 1 / 7 / 13; }
+
+.case-modal-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 0;
+}
 
 @keyframes modalAnimation {
   from {
