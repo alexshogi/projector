@@ -4,6 +4,16 @@ const headerVideo = document.getElementById('site-header-video');
 headerVideo.load();
 headerVideo.play();
 
+// Меню
+
+const burger = document.getElementById('burger-menu');
+const nav = document.getElementById('nav-main');
+
+burger.addEventListener('click', function() {
+  nav.classList.toggle('hidden');
+  burger.classList.toggle('active');
+})
+
 // Услуги
 const serviceButtons = document.querySelectorAll('[data-type="service-btn"]');
 const serviceLists = document.querySelectorAll('[data-type="service-list"]');
@@ -55,6 +65,7 @@ for (const serviceButton of serviceButtons) {
 //  Кейсы
 
 const modalContainer = document.getElementById('cases-modal-container');
+const modal = document.getElementById('modal-initial');
 const casesElems = document.querySelectorAll('.case');
 
 const heading = document.getElementById('case-heading');
@@ -105,7 +116,7 @@ nextCaseBtn.addEventListener('click', function() {
   value += 1;
   fillContent();
 
-  heading.scrollIntoView({
+  modal.scrollIntoView({
     behavior: 'smooth'
   });
 })

@@ -25,13 +25,19 @@
       </video>
       <img class="header-cross" src="./images/cross.png">
       <div class="site-header-content">
-        <nav class="header-nav">
+        <nav class="header-nav hidden" id="nav-main">
           <a href="#services">услуги</a>
           <a href="#howwedo">как мы работаем</a>
           <a href="#team">команда</a>
           <a href="#cases">кейсы</a>
           <a href="#clients">клиенты и партнеры</a>
           <a href="#request">оставить заявку</a>
+
+          <div class="burger-menu" id="burger-menu">
+            <div class="stripe"></div>
+            <div class="stripe stripe-middle"></div>
+            <div class="stripe"></div>
+          </div>
         </nav>
         <section class="header-text-content">
           <img src="./images/logo.png" alt="ПРОЖЕКТОР">
@@ -254,8 +260,8 @@
         </div>
 
         <div id="cases-modal-container" class="cases-modal-container">
-          <div class="cases-modal">
-            <div class="cases-modal-header">
+          <div class="cases-modal" id="cases-modal">
+            <div class="cases-modal-header" id="modal-initial">
               <h3 id="case-heading" class="case-heading"></h3>
               <div id="case-modal-close" class="close-btn"></div>
             </div>
@@ -330,7 +336,7 @@
               для проведения, которая идеально отвечает требованиям мероприятия
             </p>
           </div>
-          <div class="howwedo-item">
+          <div class="howwedo-item no-arrow">
             <h3>04</h3>
             <h4>РАЗРАБОТАЕМ ДИЗАЙН</h4>
             <p>
@@ -362,7 +368,7 @@
               на площадке: монтаж, проведение мероприятия, демонтаж 
             </p>
           </div>
-          <div class="howwedo-item">
+          <div class="howwedo-item no-arrow">
             <h3>08</h3>
             <h4>ПОДГОТОВИМ ОТЧЕТЫ</h4>
             <p>

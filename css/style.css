@@ -200,6 +200,7 @@ body {
   padding: 75px 100px;
   position: relative;
   height: calc(100vh - 200px);
+  overflow: hidden;
 }
 
 .site-header:before {
@@ -243,6 +244,61 @@ body {
   align-items: center;
   justify-content: center;
   padding: 36px;
+  position: relative;
+}
+
+.header-nav::before {
+  display: block;
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  left: calc(-50% - 38px);
+  top: -1px;
+  content: "";
+  background-color: #FFFFFF;
+  z-index: 2;
+}
+
+.header-nav::after {
+  display: block;
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  left: calc(50% + 38px);
+  top: -1px;
+  content: "";
+  background-color: #FFFFFF;
+  z-index: 2;
+}
+
+.burger-menu {
+  position: absolute;
+  width: 70px;
+  height: 30px;
+  left: calc(50% - 35px);
+  top: -18px;
+  cursor: pointer;
+  padding-top: 10px;
+}
+
+.burger-menu .stripe {
+  width: 37px;
+  height: 3px;
+  background-color: #FFFFFF;
+  margin: 0 auto;
+  transition: all 0.3s;
+}
+
+.burger-menu .stripe.stripe-middle {
+  margin: 4px auto;
+}
+
+.burger-menu.active > .stripe-middle {
+  transform: translateX(8px);
+}
+
+.burger-menu.active > .stripe:not(.stripe-middle) {
+  transform: translateX(-8px);
 }
 
 .site-header-content .header-nav a {
@@ -256,6 +312,11 @@ body {
   margin: 0 9px;
   transition: all 0.24s;
   border-bottom: 1px solid transparent;
+}
+
+.header-nav.hidden a {
+  opacity: 0;
+  pointer-events: none;
 }
 
 .site-header-content .header-nav a:hover {
@@ -278,7 +339,7 @@ body {
   font-size: 25px;
   line-height: 32px;
   color: #FFFFFF;
-  margin-bottom: 150px;
+  margin-bottom: 100px;
 }
 
 .header-text-content .header-contacts {
@@ -452,7 +513,6 @@ body {
 .cases-modal-container {
   position: fixed;
   display: none;
-  /* display: block; */
   top: 0;
   left: 0;
   width: 100%;
@@ -589,7 +649,7 @@ body {
   position: relative;
 }
 
-.howwedo-item h3::after {
+.howwedo-item h3:after {
   position: absolute;
   content: "";
   display: block;
@@ -600,7 +660,7 @@ body {
   background-color: #FFFFFF;
 }
 
-.howwedo-item h3::before {
+.howwedo-item h3:before {
   position: absolute;
   content: "";
   display: block;
@@ -612,6 +672,11 @@ body {
   transform: rotateZ(45deg);
   border-top: 2px solid #FFFFFF;
   border-right: 2px solid #FFFFFF;
+}
+
+.howwedo-item.no-arrow h3:before,
+.howwedo-item.no-arrow h3:after {
+  display: none;
 }
 
 .howwedo-item h4 {
