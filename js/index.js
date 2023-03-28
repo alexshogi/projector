@@ -79,7 +79,6 @@ modalCloseBtn.addEventListener('click', function() {
 let value = 0;
 
 const fillContent = function() {
-  console.log(887, value)
   const caseInfo = cases.find(c => c.value === `case${value}`);
 
   heading.innerText = caseInfo.title;
@@ -120,8 +119,3 @@ for (const caseElem of casesElems) {
     modalContainer.style.display = 'block';
   });
 }
-
-// modalContainer.style.display = "block"
-// modalContainer.style.display = "none"
-
-console.log(casesElems);
