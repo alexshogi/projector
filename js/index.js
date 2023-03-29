@@ -130,3 +130,20 @@ for (const caseElem of casesElems) {
     modalContainer.style.display = 'block';
   });
 }
+
+// Основное видео
+
+const playBtn = document.getElementById('main-video-btn');
+const mainVideo = document.getElementById('main-video');
+
+mainVideo.load();
+
+playBtn.addEventListener('click', function() {
+  if (mainVideo.paused) {
+    mainVideo.play();
+  } else {
+    mainVideo.pause();
+  }
+
+  playBtn.classList.toggle('stop');
+})
