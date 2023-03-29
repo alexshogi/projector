@@ -380,6 +380,9 @@ body {
   }
   .site-header video {
     object-fit: fill;
+    height: 800px;
+    width: 1500px;
+    left: -750px;
   }
   .site-header:before {
     display: block;
