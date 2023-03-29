@@ -333,14 +333,12 @@ body {
 
 .header-text-content {
   position: absolute;
-  padding: 0 50px 30px 0;
-  padding-top: 10%;
+  padding: 30px 50px 30px 50px;
   width: calc(100% - 100px);
 }
 
 .header-text-content img {
   margin-bottom: 20px;
-  width: clamp(100px, 50%, 700px);
 }
 
 .header-text-content .header-text {
@@ -371,6 +369,87 @@ body {
 .header-text-content .header-contacts a:hover {
   font-weight: 500;
   color: #FFFFFF;
+}
+
+@media screen and (max-width: 999px) {
+  #site-header-video,
+  .site-header {
+    height: 800px;
+    box-sizing: border-box;
+    padding-top: 30px;
+  }
+  .site-header video {
+    object-fit: fill;
+  }
+  .site-header:before {
+    display: block;
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    left: 43px;
+    top: 0;
+    box-shadow: none;
+    z-index: 2;
+  }
+  .site-header-content {
+    position: absolute;
+    z-index: 3;
+    left: 50px;
+    width: calc(100% - 40px);
+  }
+  .header-text-content {
+    padding: 0;
+    width: 100%;
+  }
+  .header-text-content .header-text p,
+  .header-text-content .header-contacts a {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .site-header-content .header-nav {
+    width: 100%;
+    align-items: flex-end;
+    padding: 28px 8px;
+    flex-direction: column;
+  }
+  .header-nav::after {
+    display: none;
+  }
+  .header-cross {
+    width: 120px;
+  }
+  .header-nav::before {
+    width: 150%;
+    right: 100px;
+    height: 2px;
+    top: 0;
+    left: unset;
+  }
+  .burger-menu {
+    left: unset;
+    top: -18px;
+    right: 25px;
+    cursor: pointer;
+    padding-top: 10px;
+  }
+  .header-text-content img {
+    margin-bottom: 16px;
+    max-width: calc(100% - 50px);
+  }
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1440px) {
+  #site-header-video {
+    height: 875px;
+  }
+  .site-header {
+    height: 875px;
+    box-sizing: border-box;
+  }
+  .site-header video {
+    object-fit: fill;
+  }
 }
 
 /* Услуги */
@@ -435,6 +514,10 @@ body {
   padding-left: 50px;
 }
 
+.services-content .menu .heading {
+  display: none;
+}
+
 .services-content .menu h4 {
   font-weight: 500;
   font-size: 25px;
@@ -463,6 +546,46 @@ body {
 .services-content .menu ul li.active {
   font-weight: 500;
   opacity: 1;
+}
+
+@media screen and (max-width: 999px) {
+  .services {
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 75px;
+    min-height: fit-content;
+  }
+  .services:before {
+    width: 2px;
+    height: 100%;
+    left: 43px;
+    box-shadow: none;
+  }
+  .services-content .info h2,
+  .services-content .menu h4 {
+    margin: 0;
+    margin-bottom: 30px;
+  }
+  .services-content .menu ul li {
+    font-size: 24px;
+    line-height: 34px;
+  }
+  .services-content .info ul li {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    opacity: 0.7;
+    margin-bottom: 16px;
+  }
+  .services-content .menu .heading {
+    display: inline-block;
+    font-weight: 400;
+    font-size: 55px;
+    line-height: 47px;
+    margin-bottom: 30px;
+  }
 }
 
 /* Кейсы */
@@ -1189,7 +1312,6 @@ ul {
   }
 
   .site-header,
-  .services,
   .cases,
   .howwedo,
   .team,
