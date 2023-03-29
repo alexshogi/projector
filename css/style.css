@@ -555,7 +555,7 @@ body {
   .services {
     padding: 50px 30px;
     min-height: fit-content;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
   }
   .services-content {
     padding: 0;
@@ -609,7 +609,7 @@ body {
 .cases-content {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(3, 250px);
+  grid-auto-rows: 250px;
   grid-column-gap: 0px;
   grid-row-gap: 0px;
 }
@@ -760,14 +760,15 @@ body {
 @media (max-width: 899px) {
   .cases {
     padding: 8px;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
   }
   .cases-content {
     grid-template-columns: repeat(2, 50%);
-    grid-auto-rows: 200px;
+    grid-auto-rows: 160px;
   }
   .case {
     padding: 8px;
+    white-space: break-spaces;
   }
   .case .case-number {
     font-size: 70px;
@@ -822,11 +823,11 @@ body {
 @media (min-width: 900px) and (max-width: 999px) {
   .cases {
     padding: 16px;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
   }
   .cases-content {
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(4, 200px);
+    grid-auto-rows: 200px;
   }
   .case {
     padding: 12px;
@@ -925,7 +926,7 @@ body {
 @media (max-width: 899px) {
   .howwedo {
     padding: 8px;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
   }
 
   .howwedo h2 {
@@ -996,7 +997,7 @@ body {
 @media screen and (max-width: 674px) {
   .team {
     padding: 8px;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
   }
   .team-content {
     grid-template-columns: 1fr;
@@ -1016,7 +1017,7 @@ body {
 @media screen and (min-width: 675px) and (max-width: 899px) {
   .team {
     padding: 8px;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
   }
   .team-member img {
     max-width: 170px;
@@ -1097,7 +1098,7 @@ body {
 @media (min-width: 900px) and (max-width: 1439px) {
   .clients {
     padding: 8px;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
   }
   .clients-content {
     grid-template-columns: repeat(4, minmax(150px, 275px));
@@ -1149,7 +1150,7 @@ body {
 @media (max-width: 899px) {
   .price {
     padding: 8px 24px;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
   }
 }
 
@@ -1208,6 +1209,11 @@ body {
   border-bottom: 14px solid transparent;
 }
 
+.video-container .play-btn.stop {
+  opacity: 0.5;
+  background: transparent;
+}
+
 .video-container .play-btn.stop:after {
   top: calc(50% - 14px);
   left: calc(50% - 14px);
@@ -1215,12 +1221,13 @@ body {
   border-left: 14px solid #FFFFFF;
   border-bottom: 14px solid #FFFFFF;
   border-right: 14px solid #FFFFFF;
+  opacity: 0.75;
 }
 
 @media (max-width: 899px) {
   .video {
     padding: 8px;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
   }
 }
 
@@ -1308,7 +1315,11 @@ body {
 @media (max-width: 899px) {
   .request {
     padding: 8px;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
+  }
+
+  .request .form input:last-of-type {
+    margin-bottom: 40px;
   }
 }
 
