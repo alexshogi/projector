@@ -194,6 +194,12 @@ body {
   height: 100%;
 }
 
+@media screen and (max-width: 1499px) {
+  .container {
+    padding: 8px;
+  }
+}
+
 /* Шапка */
 
 .site-header {
@@ -327,11 +333,14 @@ body {
 
 .header-text-content {
   position: absolute;
-  padding: 50px;
+  padding: 0 50px 30px 0;
+  padding-top: 10%;
+  width: calc(100% - 100px);
 }
 
 .header-text-content img {
   margin-bottom: 20px;
+  width: clamp(100px, 50%, 700px);
 }
 
 .header-text-content .header-text {
@@ -482,6 +491,28 @@ body {
   transition: all 0.24s;
   cursor: pointer;
   user-select: none;
+}
+
+@media screen and (max-width: 899px) {
+  .cases-content {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, minmax(150px, 200px));
+  }
+
+  .case {
+    padding: 8px;
+  }
+}
+
+@media screen and (min-width: 900px) and (max-width: 999px) {
+  .cases-content {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 200px);
+  }
+
+  .case {
+    padding: 12px;
+  }
 }
 
 .case:not(.static):hover {
@@ -708,14 +739,26 @@ body {
 .team-content {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 160px);
   grid-column-gap: 24px;
   grid-row-gap: 20px;
 }
 
+@media screen and (max-width: 1349px) {
+  .team-content {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(auto, 160px);
+    grid-column-gap: 20px;
+    grid-row-gap: 16px;
+  }
+
+  .team-member img {
+    flex: unset !important;
+  }
+}
+
 .team-member {
   width: 100%;
-  height: 160px;
   border: 2px solid #FFFFFF;
 }
 
@@ -751,22 +794,53 @@ body {
 
 .clients-content {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(2, 190px);
+  margin: 0 auto;
+  /* grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 190px;
   grid-column-gap: 25px;
-  grid-row-gap: 20px;
+  grid-row-gap: 20px; */
 }
 
 .client {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .client p {
   font-weight: 700;
   font-size: 20px;
   line-height: 36px;
+}
+
+@media (max-width: 899px) {
+  .clients-content {
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 75px;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+  }
+}
+
+@media (min-width: 900px) and (max-width: 1439px) {
+  .clients-content {
+    grid-template-columns: repeat(4, minmax(150px, 275px));
+    grid-auto-rows: 120px;
+    grid-column-gap: 20px;
+    grid-row-gap: 25px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .clients-content {
+    grid-template-columns: repeat(5, minmax(200px, 250px));
+    grid-auto-rows: 190px;
+    grid-column-gap: 35px;
+    grid-row-gap: 40px;
+  }
 }
 
 /* Цена */
@@ -1018,4 +1092,88 @@ ul {
   height: 30px;
   background-color: #FFFFFF;
   transform: rotateZ(-45deg);
+}
+
+@media (max-width: 899px) {
+  h2,
+  .request .info h2 {
+    font-size: 45px;
+    line-height: 39px;
+    margin-bottom: 30px;
+  }
+
+  .howwedo-content {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    grid-column-gap: 30px;
+    grid-row-gap: 5px;
+  }
+  
+  .howwedo-item h4 {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+  }
+  
+  .howwedo-item h3:after {
+    display: none;
+  }
+  
+  .howwedo-item h3:before {
+    display: none;
+  }
+
+  .price h3 {
+    font-size: 18px;
+    line-height: 23px;
+  }
+  
+  .price-content p {
+    font-size: 13px;
+    line-height: 16px;
+  }
+  
+  .price-content .button {
+    margin: 30px auto 0 auto;
+  }
+
+  .request {
+    flex-direction: column;
+  }
+  .request .info {
+    margin-bottom: 30px;
+  }
+  .request .form {
+    padding: 16px;
+  }
+
+  .site-footer {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .site-footer ul li a,
+  .site-footer .contacts a {
+    font-size: 14px;
+    line-height: 16px;
+  }
+}
+
+@media screen and (max-width: 1499px) {
+  .container {
+    padding: 8px;
+  }
+
+  .site-header,
+  .services,
+  .cases,
+  .howwedo,
+  .team,
+  .video,
+  .request,
+  .clients,
+  .site-footer {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
 }
