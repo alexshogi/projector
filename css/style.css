@@ -376,7 +376,7 @@ body {
   .site-header {
     height: 800px;
     box-sizing: border-box;
-    padding-top: 30px;
+    padding-top: 0;
   }
   .site-header video {
     object-fit: fill;
@@ -386,12 +386,13 @@ body {
     position: absolute;
     width: 2px;
     height: 100%;
-    left: 43px;
+    left: 20px;
     top: 0;
     box-shadow: none;
     z-index: 2;
   }
   .site-header-content {
+    top: 30px;
     position: absolute;
     z-index: 3;
     left: 50px;
@@ -399,7 +400,8 @@ body {
   }
   .header-text-content {
     padding: 0;
-    width: 100%;
+    width: calc(100% - 20px);
+    left: -10px;
   }
   .header-text-content .header-text p,
   .header-text-content .header-contacts a {
@@ -417,6 +419,7 @@ body {
     display: none;
   }
   .header-cross {
+    left: -20px;
     width: 120px;
   }
   .header-nav::before {
@@ -550,15 +553,20 @@ body {
 
 @media screen and (max-width: 999px) {
   .services {
-    padding-left: 50px;
-    padding-right: 50px;
-    padding-bottom: 75px;
+    padding: 50px 30px;
     min-height: fit-content;
+    margin-bottom: 100px;
+  }
+  .services-content {
+    padding: 0;
+  }
+  .services-content .menu {
+    padding-left: 8px;
   }
   .services:before {
     width: 2px;
     height: 100%;
-    left: 43px;
+    left: 20px;
     box-shadow: none;
   }
   .services-content .info h2,
@@ -616,28 +624,6 @@ body {
   user-select: none;
 }
 
-@media screen and (max-width: 899px) {
-  .cases-content {
-    grid-template-columns: repeat(2, 1fr);
-    grid-auto-rows: minmax(150px, 200px);
-  }
-
-  .case {
-    padding: 8px;
-  }
-}
-
-@media screen and (min-width: 900px) and (max-width: 999px) {
-  .cases-content {
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(4, 200px);
-  }
-
-  .case {
-    padding: 12px;
-  }
-}
-
 .case:not(.static):hover {
   transform: scale(1.05);
   z-index: 2;
@@ -662,6 +648,42 @@ body {
   margin: 0;
   margin-top: 10px;
   color: #FFFFFF;
+}
+
+@media (max-width: 899px) {
+  .cases {
+    padding: 8px;
+    margin-bottom: 100px;
+  }
+  .cases-content {
+    grid-template-columns: repeat(2, 50%);
+    grid-auto-rows: 200px;
+  }
+  .case {
+    padding: 8px;
+  }
+  .case p {
+    font-size: 16px;
+    line-height: 18px;
+  }
+}
+
+@media (min-width: 900px) and (max-width: 999px) {
+  .cases {
+    padding: 16px;
+    margin-bottom: 100px;
+  }
+  .cases-content {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 200px);
+  }
+  .case {
+    padding: 12px;
+  }
+  .case p {
+    font-size: 18px;
+    line-height: 20px;
+  }
 }
 
 .cases-modal-container {
@@ -853,6 +875,32 @@ body {
   color: var(--text-greygreen);
 }
 
+@media (max-width: 899px) {
+  .howwedo {
+    padding: 8px;
+    margin-bottom: 100px;
+  }
+
+  .howwedo h2 {
+    margin: 0;
+    margin-bottom: 8px;
+  }
+
+  .howwedo-item h3 {
+    margin-top: 8px;
+    margin-bottom: 0;
+  }
+
+  .howwedo-item h4 {
+    margin: 8px 0;
+  }
+
+  .howwedo-item p {
+    font-size: 16px;
+    line-height: 18px;
+  }
+}
+
 /* Команда */
 
 .team {
@@ -868,6 +916,11 @@ body {
 }
 
 @media screen and (max-width: 899px) {
+  .team {
+    padding: 8px;
+    margin-bottom: 100px;
+  }
+
   .team-content {
     grid-template-columns: 1fr;
     grid-auto-rows: 140px;
@@ -938,6 +991,7 @@ body {
 .clients-content {
   display: grid;
   margin: 0 auto;
+  position: relative;
   /* grid-template-columns: repeat(5, 1fr);
   grid-template-rows: 190px;
   grid-column-gap: 25px;
@@ -960,15 +1014,28 @@ body {
 }
 
 @media (max-width: 899px) {
+  .clients {
+    padding: 8px;
+    margin-bottom: 170px;
+  }
   .clients-content {
     grid-template-columns: repeat(3, 1fr);
     grid-auto-rows: 75px;
     grid-column-gap: 20px;
     grid-row-gap: 20px;
   }
+  .client-promo {
+    position: absolute;
+    bottom: -70px;
+    width: 100%;
+  }
 }
 
 @media (min-width: 900px) and (max-width: 1439px) {
+  .clients {
+    padding: 8px;
+    margin-bottom: 100px;
+  }
   .clients-content {
     grid-template-columns: repeat(4, minmax(150px, 275px));
     grid-auto-rows: 120px;
@@ -1016,6 +1083,13 @@ body {
   margin: 50px auto 0 auto;
 }
 
+@media (max-width: 899px) {
+  .price {
+    padding: 8px 24px;
+    margin-bottom: 100px;
+  }
+}
+
 /* Видео */
 
 .video {
@@ -1027,6 +1101,13 @@ body {
   width: 100%;
   padding-top: 56.25%;
   position: relative;
+}
+
+@media (max-width: 899px) {
+  .video {
+    padding: 8px;
+    margin-bottom: 100px;
+  }
 }
 
 /* Давайте сделаем проект вместе */
@@ -1110,6 +1191,13 @@ body {
   padding-bottom: 12px;
 }
 
+@media (max-width: 899px) {
+  .request {
+    padding: 8px;
+    margin-bottom: 100px;
+  }
+}
+
 /* Подвал */
 
 .site-footer {
@@ -1151,6 +1239,15 @@ body {
   line-height: 26px;
   text-align: right;
   color: #FFFFFF;
+}
+
+@media (max-width: 899px) {
+  .site-footer {
+    padding: 8px;
+  }
+  .site-footer .contacts a {
+    margin-bottom: 16px;
+  }
 }
 
 /* Общее */
@@ -1238,6 +1335,10 @@ ul {
 }
 
 @media (max-width: 899px) {
+  .container {
+    padding: 0;
+  }
+
   h2,
   .request .info h2 {
     font-size: 45px;
@@ -1306,7 +1407,7 @@ ul {
   }
 }
 
-@media screen and (max-width: 1499px) {
+@media (min-width: 900px) and (max-width: 1499px) {
   .container {
     padding: 8px;
   }
