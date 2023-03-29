@@ -374,15 +374,15 @@ body {
 @media screen and (max-width: 999px) {
   #site-header-video,
   .site-header {
-    height: 800px;
+    height: 700px;
     box-sizing: border-box;
     padding-top: 0;
   }
   .site-header video {
     object-fit: fill;
-    height: 800px;
-    width: 1500px;
-    left: -750px;
+    height: 700px;
+    width: 1300px;
+    left: -650px;
   }
   .site-header:before {
     display: block;
@@ -442,19 +442,6 @@ body {
   .header-text-content img {
     margin-bottom: 16px;
     max-width: calc(100% - 50px);
-  }
-}
-
-@media screen and (min-width: 1000px) and (max-width: 1440px) {
-  #site-header-video {
-    height: 875px;
-  }
-  .site-header {
-    height: 875px;
-    box-sizing: border-box;
-  }
-  .site-header video {
-    object-fit: fill;
   }
 }
 
