@@ -19,11 +19,41 @@ const serviceButtons = document.querySelectorAll('[data-type="service-btn"]');
 const serviceLists = document.querySelectorAll('[data-type="service-list"]');
 const servicesBlock = document.querySelector('.services');
 
-// const firstList = document.querySelector(`[data-type="service-list"][data-value="${1}"]`);
-// firstList.style.display = 'unset';
+const servicesArr = Array.from(serviceButtons);
 
-for (const serviceButton of serviceButtons) {
+let activeElemIndex = 0;
+
+const rollServices = () => {
+  if (activeElemIndex === servicesArr.length - 1) {
+    activeElemIndex = 0;
+  } else {
+    activeElemIndex = activeElemIndex + 1;
+  }
+
+  serviceButtons.forEach(btn => {
+    btn.classList.remove('active');
+    btn.classList.add('normal');
+  })
+
+  servicesArr[activeElemIndex].classList.add('active');
+
+  const value = servicesArr[activeElemIndex].dataset.value;  
+  servicesBlock.style.backgroundImage = `url(./images/services/${value}.png)`;
+};
+
+let serviceInterval = setInterval(() => {
+  rollServices();
+}, 3000);
+
+servicesArr.forEach((serviceButton, index) => {
   serviceButton.addEventListener('click', function() {
+    activeElemIndex = index;
+    clearInterval(serviceInterval);
+
+    serviceInterval = setInterval(() => {
+      rollServices();
+    }, 3000);
+
     const value = serviceButton.dataset.value;
 
     serviceLists.forEach(list => {
@@ -43,6 +73,13 @@ for (const serviceButton of serviceButtons) {
   });
 
   serviceButton.addEventListener('mouseover', function() {
+    activeElemIndex = index;
+    clearInterval(serviceInterval);
+
+    serviceInterval = setInterval(() => {
+      rollServices();
+    }, 3000);
+
     const value = serviceButton.dataset.value;
 
     serviceLists.forEach(list => {
@@ -60,7 +97,7 @@ for (const serviceButton of serviceButtons) {
     servicesBlock.style.backgroundImage = `url(./images/services/${value}.png)`;
     list.style.display = 'unset';
   });
-}
+});
 
 //  Кейсы
 

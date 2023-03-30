@@ -550,6 +550,11 @@ body {
   opacity: 1;
 }
 
+.services-content .menu ul li.normal {
+  font-weight: 300;
+  opacity: 0.7;
+}
+
 .services-content .menu ul li.active {
   font-weight: 500;
   opacity: 1;
