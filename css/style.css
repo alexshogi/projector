@@ -205,7 +205,7 @@ body {
 .site-header {
   padding: 75px 100px;
   position: relative;
-  height: calc(100vh - 200px);
+  height: 700px;
   overflow: hidden;
 }
 
@@ -401,7 +401,8 @@ body {
     width: calc(100% - 40px);
   }
   .header-text-content .header-text {
-    margin-bottom: 30px;
+    margin-bottom: 16px;
+    max-width: 282px;
   }
   .header-text-content {
     padding: 0;
@@ -413,6 +414,9 @@ body {
     font-weight: 300;
     font-size: 16px;
     line-height: 20px;
+  }
+  .header-text-content .header-contacts a {
+    margin-bottom: 4px;
   }
   .site-header-content .header-nav {
     width: 100%;
@@ -853,7 +857,7 @@ body {
 /* Как мы работаем */
 
 .howwedo {
-  padding: 0 100px 180px 100px;
+  padding: 0 100px 130px 100px;
 }
 
 .howwedo-content {
@@ -870,6 +874,7 @@ body {
   line-height: 101px;
   color: #FFFFFF;
   margin-bottom: 16px;
+  margin-top: 0;
   position: relative;
 }
 
@@ -984,6 +989,7 @@ body {
   font-weight: 500;
   font-size: 25px;
   line-height: 32px;
+  margin-bottom: 0;
   color: #FFFFFF;
 }
 
@@ -991,6 +997,7 @@ body {
   font-weight: 300;
   font-size: 15px;
   line-height: 18px;
+  margin-top: 5px;
   color: #FFFFFF;
 }
 
@@ -1388,6 +1395,7 @@ h2 {
   line-height: 120px;
   color: #FFFFFF;
   margin-bottom: 100px;
+  margin-top: 0;
   text-transform: uppercase;
 }
 
