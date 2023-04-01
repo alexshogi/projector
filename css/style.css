@@ -462,14 +462,15 @@ body {
 /* Услуги */
 
 .services {
-  padding: 130px 100px 0 100px;
-  margin-bottom: 130px;
+  padding: 112px 100px 0 100px;
+  margin-bottom: 112px;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-image: url(../images/services/forums.png);
   position: relative;
-  min-height: 1000px;
+  height: 800px;
+  margin-top: -40px;
   border-bottom: 2px solid #FFFFFF;
   transition: all 0.4s;
 }
@@ -499,6 +500,7 @@ body {
 
 .services-content .info h2 {
   line-height: 70px;
+  margin-top: 4px;
   margin-bottom: 95px;
 }
 
@@ -513,7 +515,7 @@ body {
   text-transform: uppercase;
   color: #FFFFFF;
   opacity: 0.7;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 .services-content .menu {
@@ -530,7 +532,8 @@ body {
   font-size: 25px;
   line-height: 32px;
   color: #FFFFFF;
-  margin-bottom: 50px;
+  margin-top: 0;
+  margin-bottom: 30px;
 }
 
 .services-content .menu ul li {
@@ -540,7 +543,7 @@ body {
   text-transform: uppercase;
   color: #FFFFFF;
   opacity: 0.7;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
   cursor: pointer;
   transition: all 0.24s;
 }
@@ -611,7 +614,7 @@ body {
 /* Кейсы */
 
 .cases {
-  padding: 0 100px 130px 100px;
+  padding: 0 100px 112px 100px;
   position: relative;
 }
 
@@ -862,7 +865,7 @@ body {
 /* Как мы работаем */
 
 .howwedo {
-  padding: 0 100px 130px 100px;
+  padding: 0 100px 112px 100px;
 }
 
 .howwedo-content {
@@ -964,7 +967,7 @@ body {
 /* Команда */
 
 .team {
-  padding: 0 100px 130px 100px;
+  padding: 0 100px 112px 100px;
 }
 
 .team-content {
@@ -1061,7 +1064,7 @@ body {
 /* Клиенты и партнёры */
 
 .clients {
-  padding: 0 100px 130px 100px;
+  padding: 0 100px 112px 100px;
 }
 
 .clients-content {
@@ -1132,7 +1135,7 @@ body {
 /* Цена */
 
 .price {
-  padding: 0 100px 130px 100px;
+  padding: 0 100px 112px 100px;
 }
 
 .price h3 {
@@ -1169,7 +1172,7 @@ body {
 /* Видео */
 
 .video {
-  padding: 0 100px 130px 100px;
+  padding: 0 100px 112px 100px;
 }
 
 .video-container {
@@ -1246,7 +1249,7 @@ body {
 /* Давайте сделаем проект вместе */
 
 .request {
-  padding: 0 100px 130px 100px;
+  padding: 0 100px 112px 100px;
   display: flex;
   flex-direction: row;
 }
@@ -1399,7 +1402,7 @@ h2 {
   font-size: 115px;
   line-height: 120px;
   color: #FFFFFF;
-  margin-bottom: 100px;
+  margin-bottom: 50px;
   margin-top: 0;
   text-transform: uppercase;
 }

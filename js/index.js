@@ -22,23 +22,38 @@ const servicesBlock = document.querySelector('.services');
 const servicesArr = Array.from(serviceButtons);
 
 let activeElemIndex = 0;
+let doRoll = false;
+
+if (window.innerWidth < 1000) {
+  doRoll = true;
+}
+
+window.addEventListener('resize', () => {
+  if (window.innerWidth < 1000) {
+    doRoll = true;
+  } else {
+    doRoll = false;
+  }
+});
 
 const rollServices = () => {
-  if (activeElemIndex === servicesArr.length - 1) {
-    activeElemIndex = 0;
-  } else {
-    activeElemIndex = activeElemIndex + 1;
+  if (doRoll) {
+    if (activeElemIndex === servicesArr.length - 1) {
+      activeElemIndex = 0;
+    } else {
+      activeElemIndex = activeElemIndex + 1;
+    }
+  
+    serviceButtons.forEach(btn => {
+      btn.classList.remove('active');
+      btn.classList.add('normal');
+    })
+  
+    servicesArr[activeElemIndex].classList.add('active');
+  
+    const value = servicesArr[activeElemIndex].dataset.value;  
+    servicesBlock.style.backgroundImage = `url(./images/services/${value}.png)`;
   }
-
-  serviceButtons.forEach(btn => {
-    btn.classList.remove('active');
-    btn.classList.add('normal');
-  })
-
-  servicesArr[activeElemIndex].classList.add('active');
-
-  const value = servicesArr[activeElemIndex].dataset.value;  
-  servicesBlock.style.backgroundImage = `url(./images/services/${value}.png)`;
 };
 
 let serviceInterval = setInterval(() => {
