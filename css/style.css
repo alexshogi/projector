@@ -377,12 +377,14 @@ body {
   left: 0;
   right: 0;
   height: 30px;
-  backdrop-filter: blur(20px);
+  /* backdrop-filter: blur(20px); */
+  background-color: #141414;
   z-index: 100;
   padding-top: 20px;
 }
 
-.header-scroll.hidden {
+.header-scroll.hidden,
+.header-nav.hidden a {
   display: none;
 }
 
@@ -1222,8 +1224,10 @@ body {
   }
   .client-promo {
     position: absolute;
-    bottom: -70px;
-    width: 100%;
+    bottom: -105px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
   }
 }
 
@@ -1644,6 +1648,10 @@ ul {
   height: 30px;
   background-color: #FFFFFF;
   transform: rotateZ(-45deg);
+}
+
+.text-white {
+  color: #FFFFFF !important;
 }
 
 @media (max-width: 899px) {
