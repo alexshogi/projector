@@ -5,13 +5,41 @@ headerVideo.load();
 headerVideo.play();
 
 // Меню
-
 const burger = document.getElementById('burger-menu');
 const nav = document.getElementById('nav-main');
+
+const headerScroll = document.getElementById('header-scroll');
+const burgerScroll = document.getElementById('burger-menu-scroll');
+const navScroll = document.getElementById('nav-scroll');
 
 burger.addEventListener('click', function() {
   nav.classList.toggle('hidden');
   burger.classList.toggle('active');
+})
+
+burgerScroll.addEventListener('click', function() {
+  if (navScroll.classList.contains('hidden')) {
+    if (window.innerWidth < 1000) {
+      headerScroll.style.height = '280px';
+    } else {
+      headerScroll.style.height = '100px';
+    }
+  } else {
+    headerScroll.style.height = '30px';
+  }
+  
+  navScroll.classList.toggle('hidden');
+  burgerScroll.classList.toggle('active');
+})
+
+document.addEventListener('scroll', () => {
+  const posY = window.scrollY;
+
+  if (posY > 800) {
+    headerScroll.classList.remove('hidden');
+  } else {
+    headerScroll.classList.add('hidden');
+  }
 })
 
 // Услуги
@@ -56,18 +84,18 @@ const rollServices = () => {
   }
 };
 
-let serviceInterval = setInterval(() => {
-  rollServices();
-}, 3000);
+// let serviceInterval = setInterval(() => {
+//   rollServices();
+// }, 3000);
 
 servicesArr.forEach((serviceButton, index) => {
   serviceButton.addEventListener('click', function() {
     activeElemIndex = index;
-    clearInterval(serviceInterval);
+    // clearInterval(serviceInterval);
 
-    serviceInterval = setInterval(() => {
-      rollServices();
-    }, 3000);
+    // serviceInterval = setInterval(() => {
+    //   rollServices();
+    // }, 3000);
 
     const value = serviceButton.dataset.value;
 
@@ -89,11 +117,11 @@ servicesArr.forEach((serviceButton, index) => {
 
   serviceButton.addEventListener('mouseover', function() {
     activeElemIndex = index;
-    clearInterval(serviceInterval);
+    // clearInterval(serviceInterval);
 
-    serviceInterval = setInterval(() => {
-      rollServices();
-    }, 3000);
+    // serviceInterval = setInterval(() => {
+    //   rollServices();
+    // }, 3000);
 
     const value = serviceButton.dataset.value;
 

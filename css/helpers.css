@@ -61,6 +61,10 @@
   align-content: flex-end;
 }
 
+.items-end {
+  align-items: flex-end !important;
+}
+
 .row.items-stretch,
 .column.items-stretch {
   align-items: stretch;

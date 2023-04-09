@@ -245,7 +245,7 @@ body {
   width: calc(100% - 200px);
 }
 
-.site-header-content .header-nav {
+.header-nav {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -307,7 +307,7 @@ body {
   transform: translateX(-8px);
 }
 
-.site-header-content .header-nav a {
+.header-nav a {
   display: inline-flex;
   font-family: 'MB Druzba';
   font-weight: 400;
@@ -325,7 +325,7 @@ body {
   pointer-events: none;
 }
 
-.site-header-content .header-nav a:hover {
+.header-nav a:hover {
   font-weight: 500;
   color: #FFFFFF;
   border-bottom: 1px solid rgba(255, 255, 255, 0.45);
@@ -369,6 +369,21 @@ body {
 .header-text-content .header-contacts a:hover {
   font-weight: 500;
   color: #FFFFFF;
+}
+
+.header-scroll {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 30px;
+  backdrop-filter: blur(20px);
+  z-index: 100;
+  padding-top: 20px;
+}
+
+.header-scroll.hidden {
+  display: none;
 }
 
 @media screen and (max-width: 999px) {
@@ -418,7 +433,7 @@ body {
   .header-text-content .header-contacts a {
     margin-bottom: 4px;
   }
-  .site-header-content .header-nav {
+  .header-nav {
     width: 100%;
     align-items: flex-end;
     padding: 28px 8px;
@@ -637,6 +652,17 @@ body {
   transition: all 0.24s;
   cursor: pointer;
   user-select: none;
+  position: relative;
+}
+
+.case:not(.static):before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  background-color: rgba(0,0,0,0.25);
 }
 
 .case:not(.static):hover {
@@ -654,6 +680,7 @@ body {
   line-height: 26px;
   color: #FFFFFF;
   margin: 8px 0;
+  position: relative;
 }
 
 .case .case-number {
@@ -1086,6 +1113,10 @@ body {
   background-position: center;
 }
 
+.client-promo {
+  border: 1px solid #FFFFFF;
+}
+
 .client p {
   font-weight: 700;
   font-size: 20px;
@@ -1351,11 +1382,13 @@ body {
   font-size: 35px;
   line-height: 30px;
   color: #FFFFFF;
+  margin: 0;
 }
 
 .site-footer-content {
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
   padding-top: 50px;
 }
 
@@ -1364,6 +1397,29 @@ body {
   font-size: 20px;
   line-height: 28px;
   color: #FFFFFF;
+}
+
+.site-footer-content .legal-info ul li {
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 28px;
+  color: #FFFFFF;
+  text-align: right;
+}
+
+.site-footer-content .features,
+.site-footer-content .legal-info {
+  display: flex;
+  align-items: flex-end;
+}
+
+.site-footer-content .features {
+  justify-content: flex-start;
+}
+
+.site-footer-content .legal-info {
+  display: flex;
+  justify-content: flex-end;
 }
 
 .site-footer-content .contacts {
