@@ -633,7 +633,8 @@ body {
 
 @media screen and (min-width: 1000px) {
   .services {
-    height: 100vh;
+    min-height: 100vh;
+    height: fit-content;
     box-sizing: border-box;
   }
 }
@@ -1529,6 +1530,35 @@ body {
   .site-footer .contacts a {
     margin-bottom: 16px;
   }
+  .site-footer-content .contacts {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 40px;
+  }
+  .site-footer-content {
+    flex-direction: column;
+    align-items: flex-start !important;
+  }
+  .site-footer-content .legal-info {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .site-footer-content .legal-info ul li {
+    text-align: left;
+  }
+  .site-footer-content .features {
+    margin-bottom: 40px;
+  }
+  .site-footer-content .features ul li a,
+  .site-footer-content .contacts a {
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 28px;
+    color: #FFFFFF;
+    text-align: left;
+  }
 }
 
 /* Общее */
@@ -1670,12 +1700,6 @@ ul {
   .site-footer {
     padding-top: 50px;
     padding-bottom: 50px;
-  }
-
-  .site-footer ul li a,
-  .site-footer .contacts a {
-    font-size: 14px;
-    line-height: 16px;
   }
 }
 
