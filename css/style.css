@@ -1703,6 +1703,33 @@ body {
   color: #FFFFFF;
 }
 
+.footer-nav {
+  display: flex;
+  width: 100%;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-top: 45px;
+}
+
+.footer-nav a {
+  display: inline-flex;
+  font-family: 'MB Druzba';
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 17px;
+  color: #E9E9E9;
+  padding: 8px 0;
+  margin: 0;
+  transition: all 0.24s;
+  border-bottom: 1px solid transparent;
+}
+
+.footer-nav a:hover {
+  font-weight: 500;
+  color: #FFFFFF;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.45);
+}
+
 @media (max-width: 899px) {
   .site-footer {
     padding: 8px;
@@ -1742,6 +1769,14 @@ body {
     line-height: 28px;
     color: #FFFFFF;
     text-align: left;
+  }
+}
+
+@media (min-width: 900px) {
+  .footer-nav {
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
   }
 }
 
