@@ -205,7 +205,7 @@ body {
 .site-header {
   padding: 75px 100px;
   position: relative;
-  height: 700px;
+  height: 100vh;
   overflow: hidden;
 }
 
@@ -403,15 +403,14 @@ body {
 
 @media screen and (max-width: 599px) {
   .site-header {
-    height: 840px;
+    /* height: 840px; */
     box-sizing: border-box;
     padding-top: 0;
   }
   .site-header video {
-    object-fit: fill;
-    height: 840px;
-    width: 1400px;
+    width: calc(100vh * 1.8);
     left: -25%;
+    height: 100%;
   }
   .site-header:before {
     display: block;
