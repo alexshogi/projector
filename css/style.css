@@ -1708,7 +1708,7 @@ body {
   width: 100%;
   align-items: flex-start;
   flex-direction: column;
-  margin-top: 45px;
+  min-width: 300px;
 }
 
 .footer-nav a {
@@ -1772,13 +1772,13 @@ body {
   }
 }
 
-@media (min-width: 900px) {
+/* @media (min-width: 900px) {
   .footer-nav {
     align-items: center;
     justify-content: space-between;
     flex-direction: row;
   }
-}
+} */
 
 /* Общее */
 
