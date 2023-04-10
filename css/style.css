@@ -1096,6 +1096,7 @@ body {
 .team-member {
   width: 100%;
   border: 2px solid #FFFFFF;
+  box-sizing: border-box;
 }
 
 .team-member-photo {
@@ -1128,7 +1129,37 @@ body {
   color: #FFFFFF;
 }
 
+.team-actions {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.team-button-prev,
+.team-button-next {
+  width: 28px;
+  height: 28px;
+  padding: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.team-button-prev {
+  margin-right: 30px;
+}
+
+.team-button-prev img,
+.team-button-next img {
+  height: 100%;
+}
+
 @media screen and (max-width: 674px) {
+  div.swiper {
+    padding-top: 40px;
+  }
   .team {
     padding: 8px;
     margin-bottom: 50px;
@@ -1137,14 +1168,22 @@ body {
     grid-template-columns: 1fr;
     grid-auto-rows: 100px;
     grid-row-gap: 16px;
+    display: none;
+  }
+  .team-member {
+    margin-bottom: 15px;
   }
   .team-member-photo {
-    width: 120px;
+    width: 135px;
+    height: 103px;
   }
   .team-member-info h4 {
     margin: 0;
     font-size: 20px;
     line-height: 24px;
+  }
+  .team-member-info p {
+    margin-bottom: 4px;
   }
 }
 
@@ -1161,6 +1200,9 @@ body {
     grid-auto-rows: 140px;
     grid-row-gap: 16px;
   }
+  #swiper-team {
+    display: none;
+  }
 }
 
 @media screen and (min-width: 900px) and (max-width: 1349px) {
@@ -1170,9 +1212,17 @@ body {
     grid-column-gap: 20px;
     grid-row-gap: 16px;
   }
-
   .team-member-info h4 {
     margin: 0;
+  }
+  #swiper-team {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1350px) {
+  #swiper-team {
+    display: none;
   }
 }
 
@@ -1661,9 +1711,9 @@ ul {
 
   h2,
   .request .info h2 {
-    font-size: 45px;
-    line-height: 39px;
-    margin-bottom: 30px;
+    font-size: 55px;
+    line-height: 47px;
+    margin-bottom: 50px;
   }
 
   .howwedo-content {

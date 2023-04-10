@@ -227,3 +227,11 @@ playBtn.addEventListener('click', function() {
 
   playBtn.classList.toggle('stop');
 })
+
+const swiperTeam = new Swiper('#swiper-team', {
+  loop: true,
+  navigation: {
+    nextEl: '.team-button-next',
+    prevEl: '.team-button-prev',
+  },
+});
