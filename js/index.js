@@ -143,6 +143,13 @@ servicesArr.forEach((serviceButton, index) => {
 });
 
 //  Кейсы
+const swiperCases = new Swiper('#swiper-cases', {
+  loop: true,
+  navigation: {
+    nextEl: '.cases-button-next',
+    prevEl: '.cases-button-prev',
+  },
+});
 
 const modalContainer = document.getElementById('cases-modal-container');
 const modal = document.getElementById('modal-initial');
@@ -227,6 +234,8 @@ playBtn.addEventListener('click', function() {
 
   playBtn.classList.toggle('stop');
 })
+
+// Команда
 
 const swiperTeam = new Swiper('#swiper-team', {
   loop: true,
