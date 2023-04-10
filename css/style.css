@@ -352,7 +352,6 @@ body {
   font-size: 25px;
   line-height: 32px;
   color: #FFFFFF;
-  margin-bottom: 150px;
 }
 
 .header-text-content .header-text p {
@@ -403,7 +402,6 @@ body {
 
 @media screen and (max-width: 599px) {
   .site-header {
-    /* height: 840px; */
     box-sizing: border-box;
     padding-top: 0;
   }
@@ -490,10 +488,9 @@ body {
     padding-top: 0;
   }
   .site-header video {
-    object-fit: fill;
-    height: 840px;
-    width: 1400px;
+    width: calc(100vh * 1.8);
     left: -25%;
+    height: 100%;
   }
   .site-header:before {
     display: block;
