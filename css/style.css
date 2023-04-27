@@ -734,7 +734,7 @@ body {
 
 @media screen and (max-width: 999px) {
   .services {
-    padding: 50px 38px;
+    padding: 75px 8px 0 16px;
     min-height: fit-content;
     max-height: fit-content;
     height: auto;
@@ -1710,10 +1710,12 @@ ul {
   }
 
   h2,
+  .cases h2,
   .request .info h2 {
     font-size: 55px;
     line-height: 47px;
     margin-bottom: 50px;
+    padding-left: 0;
   }
 
   .howwedo-content {
