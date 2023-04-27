@@ -200,6 +200,10 @@ body {
   }
 }
 
+.site-block {
+  padding: 125px 98px 0 122px;
+}
+
 /* Боковая полоса */
 
 .side-stripe {
@@ -777,8 +781,14 @@ body {
 /* Кейсы */
 
 .cases {
-  padding: 0 100px 112px 100px;
+  /* padding: 125px 100px 112px 100px; */
   position: relative;
+  box-sizing: border-box;
+  padding-left: 100px;
+}
+
+.cases h2 {
+  padding-left: 20px;
 }
 
 .cases-content {
@@ -1096,14 +1106,6 @@ body {
   }
 }
 
-@media screen and (min-width: 1000px) {
-  .cases {
-    height: 100vh;
-    box-sizing: border-box;
-    /* margin-bottom: 100px; */
-  }
-}
-
 @keyframes modalAnimation {
   from {
     top: -300px;
@@ -1119,7 +1121,7 @@ body {
 /* Как мы работаем */
 
 .howwedo {
-  padding: 0 100px 112px 100px;
+  /* padding: 0 100px 112px 100px; */
 }
 
 .howwedo-content {
@@ -1192,8 +1194,8 @@ body {
 
 @media (max-width: 899px) {
   .howwedo {
-    padding: 8px;
-    margin-bottom: 50px;
+    /* padding: 8px; */
+    /* margin-bottom: 50px; */
   }
 
   .howwedo h2 {
@@ -1222,18 +1224,11 @@ body {
 
 /* Команда */
 
-.team {
-  padding: 0 100px 112px 100px;
-}
+/* .team {
+  
+} */
 
 .team-content {
-  /* display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
-  grid-auto-rows: auto;
-  grid-column-gap: 40px;
-  grid-row-gap: 40px;
-  justify-content: center; */
-
   width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -1241,26 +1236,23 @@ body {
 }
 
 .team-member {
+  width: 20%;
+  margin-bottom: 5px;
+  padding: 16px;
   width: 200px;
-  /* border: 2px solid #FFFFFF; */
-  margin: 0 20px 40px 20px;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  /* background-color: rgba(220, 20, 60, 0.397); */
   align-items: center;
 }
 
 .team-member-photo {
-  min-width: 188px;
-  min-height: 188px;
-  width: 188px;
-  height: 188px;
+  width: 100%;
+  padding-bottom: 100%;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   border-radius: 50%;
-  /* border-right: 1px solid #FFFFFF; */
 }
 
 .team-member-info {
@@ -1268,7 +1260,8 @@ body {
   padding: 15px 8px;
 }
 
-.team-member-info h4 {
+.team-member-info h4,
+.team-member-info p {
   font-weight: 400;
   font-size: 20px;
   line-height: 21px;
@@ -1278,11 +1271,6 @@ body {
 }
 
 .team-member-info p {
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 21px;
-  text-align: center;
-  color: #FFFFFF;
   margin: 2px 0;
 }
 
@@ -1324,8 +1312,8 @@ body {
     padding-top: 40px;
   }
   .team {
-    padding: 8px;
-    margin-bottom: 50px;
+    /* padding: 8px; */
+    /* margin-bottom: 50px; */
   }
   .team-content {
     grid-template-columns: 1fr;
@@ -1352,8 +1340,8 @@ body {
 
 @media screen and (min-width: 675px) and (max-width: 899px) {
   .team {
-    padding: 8px;
-    margin-bottom: 50px;
+    /* padding: 8px; */
+    /* margin-bottom: 50px; */
   }
   .team-member-photo {
     width: 150px;
@@ -1394,30 +1382,32 @@ body {
 /* Клиенты и партнёры */
 
 .clients {
-  padding: 0 100px 112px 100px;
+  /* padding: 0 100px 112px 100px; */
 }
 
 .clients-content {
-  display: grid;
-  margin: 0 auto;
-  position: relative;
-  /* grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: 190px;
-  grid-column-gap: 25px;
-  grid-row-gap: 20px; */
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .client {
+  width: 20%;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
+  box-sizing: border-box;
+  padding: 4px;
+}
+
+.client img {
+  max-width: 100%;
 }
 
 .client-promo {
   border: 1px solid #FFFFFF;
+  margin: 20px 0;
 }
 
 .client p {
@@ -1427,52 +1417,52 @@ body {
 }
 
 @media (max-width: 899px) {
-  .clients {
+  /* .clients {
     padding: 8px;
     margin-bottom: 170px;
-  }
-  .clients-content {
+  } */
+  /* .clients-content {
     grid-template-columns: repeat(3, 1fr);
     grid-auto-rows: 75px;
     grid-column-gap: 20px;
     grid-row-gap: 20px;
     padding-top: 40px;
-  }
-  .client-promo {
+  } */
+  /* .client-promo {
     position: absolute;
     bottom: -105px;
     left: 50%;
     transform: translateX(-50%);
     width: 200px;
-  }
+  } */
 }
 
 @media (min-width: 900px) and (max-width: 1439px) {
-  .clients {
+  /* .clients {
     padding: 8px;
     margin-bottom: 50px;
-  }
-  .clients-content {
+  } */
+  /* .clients-content {
     grid-template-columns: repeat(4, minmax(150px, 275px));
     grid-auto-rows: 120px;
     grid-column-gap: 20px;
     grid-row-gap: 25px;
-  }
+  } */
 }
 
 @media (min-width: 1440px) {
-  .clients-content {
+  /* .clients-content {
     grid-template-columns: repeat(5, minmax(200px, 250px));
     grid-auto-rows: 190px;
     grid-column-gap: 35px;
     grid-row-gap: 40px;
-  }
+  } */
 }
 
 /* Цена */
 
 .price {
-  padding: 0 100px 112px 100px;
+  /* padding: 0 100px 112px 100px; */
 }
 
 .price h3 {
@@ -1481,6 +1471,7 @@ body {
   line-height: 63px;
   color: #FFFFFF;
   text-align: center;
+  margin: 0;
   margin-bottom: 20px;
 }
 
@@ -1501,15 +1492,15 @@ body {
 
 @media (max-width: 899px) {
   .price {
-    padding: 8px 24px;
-    margin-bottom: 50px;
+    /* padding: 8px 24px; */
+    /* margin-bottom: 50px; */
   }
 }
 
 /* Видео */
 
 .video {
-  padding: 0 100px 112px 100px;
+  padding: 125px 100px 0 100px;
 }
 
 .video-container {
@@ -1586,9 +1577,10 @@ body {
 /* Давайте сделаем проект вместе */
 
 .request {
-  padding: 0 100px 112px 100px;
+  /* padding: 0 100px 112px 100px; */
   display: flex;
   flex-direction: row;
+  padding-bottom: 125px;
 }
 
 .request .info {
@@ -1666,8 +1658,8 @@ body {
 
 @media (max-width: 899px) {
   .request {
-    padding: 8px;
-    margin-bottom: 50px;
+    /* padding: 8px; */
+    /* margin-bottom: 50px; */
   }
 
   .request .form input:last-of-type {
@@ -1753,19 +1745,17 @@ body {
 
 .footer-nav a {
   display: inline-flex;
-  font-family: 'MB Druzba';
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 17px;
-  color: #E9E9E9;
-  padding: 8px 0;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 25px;
+  color: #FFFFFF;
+  padding-bottom: 2px;
   margin: 0;
   transition: all 0.24s;
   border-bottom: 1px solid transparent;
 }
 
 .footer-nav a:hover {
-  font-weight: 500;
   color: #FFFFFF;
   border-bottom: 1px solid rgba(255, 255, 255, 0.45);
 }
