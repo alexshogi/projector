@@ -12,6 +12,11 @@ const headerScroll = document.getElementById('header-scroll');
 const burgerScroll = document.getElementById('burger-menu-scroll');
 const navScroll = document.getElementById('nav-scroll');
 
+if (window.innerWidth > 1000) {
+  nav.classList.toggle('hidden');
+  burger.classList.toggle('active');
+}
+
 burger.addEventListener('click', function() {
   nav.classList.toggle('hidden');
   burger.classList.toggle('active');

@@ -355,15 +355,19 @@ body {
 
 .header-text-content {
   position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
   top: 0;
-  padding: 250px 150px 30px 150px;
+  padding: 100px 122px 128px 122px;
   width: 100%;
   box-sizing: border-box;
   height: 100%;
 }
 
-.header-text-content img {
-  margin-bottom: 20px;
+.main-logo {
+  width: 616px;
+  height: 227px;
 }
 
 .header-text-content .header-text {
@@ -371,6 +375,7 @@ body {
   font-size: 25px;
   line-height: 32px;
   color: #FFFFFF;
+  padding: 20px 0;
 }
 
 .header-text-content .header-text p {
@@ -391,16 +396,13 @@ body {
   font-size: 25px;
   line-height: 32px;
   color: #FFFFFF;
+  border-bottom: 1px solid transparent;
+  width: fit-content;
   transition: all 0.24s;
 }
 
-.header-text-content .header-contacts a:first-of-type {
-  margin-bottom: 10px;
-}
-
 .header-text-content .header-contacts a:hover {
-  font-weight: 500;
-  color: #FFFFFF;
+  border-bottom: 1px solid #FFFFFF;
 }
 
 .header-scroll {
@@ -795,6 +797,7 @@ body {
   cursor: pointer;
   user-select: none;
   position: relative;
+  border: 1px solid transparent;
 }
 
 .case:not(.static):before {
@@ -808,8 +811,7 @@ body {
 }
 
 .case:not(.static):hover {
-  transform: scale(1.05);
-  z-index: 2;
+  border: 1px solid rgba(255, 255, 255, 0.65);
 }
 
 .case.case-border {
