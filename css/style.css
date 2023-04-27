@@ -374,8 +374,8 @@ body {
 }
 
 .main-logo {
-  width: 616px;
-  height: 227px;
+  height: 23vw;
+  max-height: 227px;
 }
 
 .header-text-content .header-text {
@@ -463,11 +463,11 @@ body {
     top: 30px;
   }
   .header-text-content {
-    padding: 265px 30px 30px 30px;
+    padding: 235px 30px 30px 30px;
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-end;
   }
   .header-text {
     margin-bottom: 16px;
@@ -492,8 +492,10 @@ body {
     display: none;
   }
   .header-cross {
-    left: -20px;
+    left: -39px;
+    top: 1px;
     width: 120px;
+    height: 59px;
   }
   .header-nav::before {
     width: 150%;
@@ -510,8 +512,8 @@ body {
     padding-top: 10px;
   }
   .header-text-content img {
-    margin-bottom: 16px;
-    max-width: 90%;
+    margin-bottom: 0;
+    max-width: 80%;
   }
 }
 
@@ -1896,6 +1898,35 @@ ul {
   .request .form .button {
     font-size: 18px;
     line-height: 20px;
+  }
+
+  .team-member {
+    width: 100%;
+    margin-bottom: 30px;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .team-member h4,
+  .team-member p {
+    font-size: 18px;
+    line-height: 18px;
+  }
+
+  .team-member-photo {
+    width: 100px;
+    max-width: 100px;
+    height: 100px;
+    max-height: 100px;
+    padding-bottom: 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 50%;
   }
 
   #swiper-team,
