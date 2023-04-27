@@ -273,3 +273,13 @@ const swiperTeam = new Swiper('#swiper-team', {
     prevEl: '.team-button-prev',
   },
 });
+
+// Прятать модалку при клике на нав. ссылку
+
+const navigationButtons = document.querySelectorAll('.navigation-button');
+
+navigationButtons.forEach((navigationButton) => {
+  navigationButton.addEventListener('click', function() {
+    modalContainer.style.display = 'none';
+  });
+});
