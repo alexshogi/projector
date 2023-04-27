@@ -140,6 +140,30 @@ servicesArr.forEach((serviceButton, index) => {
     servicesBlock.style.backgroundImage = `url(./images/services/${value}.png)`;
     list.style.display = 'unset';
   });
+
+  serviceButton.addEventListener('mouseout', function() {
+    activeElemIndex = 0;
+    // clearInterval(serviceInterval);
+
+    // serviceInterval = setInterval(() => {
+    //   rollServices();
+    // }, 3000);
+
+    const value = serviceButton.dataset.value;
+
+    serviceLists.forEach(list => {
+      list.style.display = 'none';
+    })
+
+    serviceButtons.forEach(btn => {
+      btn.classList.remove('active');
+    })
+
+    const list = document.querySelector(`[data-type="service-list"][data-value="${value}"]`);
+
+    servicesBlock.style.backgroundImage = `url(./images/services/${value}.png)`;
+    list.style.display = 'none';
+  });
 });
 
 //  Кейсы

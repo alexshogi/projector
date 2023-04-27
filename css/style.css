@@ -411,11 +411,16 @@ body {
   height: 30px;
   background-color: #141414;
   z-index: 100;
-  padding-top: 20px;
+  padding-top: 25px;
 }
 
 .header-scroll.hidden,
 .header-nav.hidden a {
+  display: none;
+}
+
+.header-scroll .header-nav:before,
+.header-scroll .header-nav:after {
   display: none;
 }
 
@@ -606,11 +611,24 @@ body {
   transition: all 0.4s;
 }
 
+.services-header,
 .services-content {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding-left: 20px;
+  padding: 0 20px;
+}
+
+.services-header h2,
+.services-header h4 {
+  flex: 1;
+}
+
+.services-header h4 {
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 32px;
+  margin: 0;
 }
 
 .services-content .info {
@@ -629,17 +647,14 @@ body {
 
 .services-content .info ul li {
   font-weight: 500;
-  font-size: 20px;
-  line-height: 26px;
-  text-transform: uppercase;
+  font-size: 25px;
+  line-height: 32px;
   color: #FFFFFF;
-  opacity: 0.7;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .services-content .menu {
   flex: 1;
-  padding-left: 50px;
 }
 
 .services-content .menu .heading {
@@ -652,7 +667,7 @@ body {
   line-height: 32px;
   color: #FFFFFF;
   margin-top: 0;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
 }
 
 .services-content .menu ul li {
@@ -662,7 +677,7 @@ body {
   text-transform: uppercase;
   color: #FFFFFF;
   opacity: 0.7;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
   cursor: pointer;
   transition: all 0.24s;
 }
