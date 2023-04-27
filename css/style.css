@@ -1227,31 +1227,6 @@ body {
   color: var(--text-greygreen);
 }
 
-/* @media (max-width: 899px) {
-  .howwedo h2 {
-    margin: 0;
-    margin-bottom: 30px;
-  }
-
-  .howwedo-item h3 {
-    margin-top: 8px;
-    margin-bottom: 0;
-    line-height: 66px;
-    font-size: 50px;
-  }
-
-  .howwedo-item h4 {
-    margin: 8px 0;
-    font-size: 16px;
-    line-height: 20px;
-  }
-
-  .howwedo-item p {
-    font-size: 16px;
-    line-height: 18px;
-  }
-} */
-
 /* Команда */
 
 .team-content {
@@ -1331,70 +1306,6 @@ body {
 .cases-button-next img {
   height: 100%;
 }
-
-/* @media screen and (max-width: 674px) {
-  div.swiper {
-    padding-top: 40px;
-  }
-  .team-content {
-    grid-template-columns: 1fr;
-    grid-auto-rows: 100px;
-    grid-row-gap: 16px;
-    display: none;
-  }
-  .team-member {
-    margin-bottom: 15px;
-  }
-  .team-member-photo {
-    width: 135px;
-    height: 103px;
-  }
-  .team-member-info h4 {
-    margin: 0;
-    font-size: 20px;
-    line-height: 24px;
-  }
-  .team-member-info p {
-    margin-bottom: 4px;
-  }
-}
-
-@media screen and (min-width: 675px) and (max-width: 899px) {
-  .team-member-photo {
-    width: 150px;
-  }
-  .team-content {
-    grid-template-columns: repeat(2, 1fr);
-    grid-auto-rows: 140px;
-    grid-row-gap: 16px;
-  }
-  #swiper-team {
-    display: none;
-  }
-}
-
-@media screen and (min-width: 900px) and (max-width: 1349px) {
-  .team-content {
-    grid-template-columns: repeat(2, 1fr);
-    grid-auto-rows: 160px;
-    grid-column-gap: 20px;
-    grid-row-gap: 16px;
-  }
-  .team-member-info h4 {
-    margin: 0;
-  }
-  #swiper-team,
-  #swiper-cases {
-    display: none;
-  }
-}
-
-@media screen and (min-width: 1350px) {
-  #swiper-team,
-  #swiper-cases {
-    display: none;
-  }
-} */
 
 /* Клиенты и партнёры */
 
@@ -1512,8 +1423,12 @@ body {
 }
 
 .video-container .play-btn.stop {
-  opacity: 0.5;
+  opacity: 0;
   background: transparent;
+}
+
+.video-container:hover .play-btn.stop  {
+  opacity: 0.6;
 }
 
 .video-container .play-btn.stop:after {
@@ -1525,13 +1440,6 @@ body {
   border-right: 14px solid #FFFFFF;
   opacity: 0.75;
 }
-
-/* @media (max-width: 899px) {
-  .video {
-    padding: 8px;
-    margin-bottom: 50px;
-  }
-} */
 
 /* Давайте сделаем проект вместе */
 
