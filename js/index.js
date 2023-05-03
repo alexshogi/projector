@@ -213,13 +213,13 @@ const fillContent = function() {
   objective.innerText = caseInfo.objective;
   solution.innerText = caseInfo.solution;
 
-  image1.src = caseInfo.image1;
-  image2.src = caseInfo.image2;
-  image3.src = caseInfo.image3;
-  image4.src = caseInfo.image4;
-  image5.src = caseInfo.image5;
-  image6.src = caseInfo.image6;
-  image7.src = caseInfo.image7;
+  image1.style.backgroundImage = `url(${caseInfo.image1})`;
+  image2.style.backgroundImage = `url(${caseInfo.image2})`;
+  image3.style.backgroundImage = `url(${caseInfo.image3})`;
+  image4.style.backgroundImage = `url(${caseInfo.image4})`;
+  image5.style.backgroundImage = `url(${caseInfo.image5})`;
+  image6.style.backgroundImage = `url(${caseInfo.image6})`;
+  image7.style.backgroundImage = `url(${caseInfo.image7})`;
 
   if (value >= 9) {
     nextCaseBtn.style.display = 'none';
