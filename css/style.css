@@ -519,7 +519,6 @@ body {
 
 @media screen and (min-width: 600px) and (max-width: 999px) {
   .site-header {
-    height: 840px;
     box-sizing: border-box;
     padding-top: 0;
   }
@@ -739,6 +738,7 @@ body {
     min-height: fit-content;
     max-height: fit-content;
     height: auto;
+    border-top: 2px solid #fafafa;
   }
   .services-header {
     padding: 0;
@@ -1183,7 +1183,7 @@ body {
   font-size: 80px;
   line-height: 101px;
   color: #FFFFFF;
-  margin-bottom: 16px;
+  margin-bottom: 0;
   margin-top: 0;
   position: relative;
 }
@@ -1220,9 +1220,11 @@ body {
 
 .howwedo-item h4 {
   font-weight: 500;
-  font-size: 19px;
-  line-height: 24px;
+  font-size: 17px;
+  line-height: 21px;
   color: #FFFFFF;
+  margin-bottom: 10px;
+  margin-top: 10px;
   text-transform: uppercase;
 }
 
@@ -1232,10 +1234,32 @@ body {
   line-height: 27px;
   color: #FFFFFF;
   opacity: 0.8;
+  margin: 0;
 }
 
 .howwedo-item:nth-child(2n) h3 {
   color: var(--text-greygreen);
+}
+
+
+@media (max-width: 899px) {
+  .howwedo-item:not(:last-of-type) {
+    margin-bottom: 30px;
+  }
+  .howwedo-item h3 {
+    font-size: 50px;
+    line-height: 63px;
+  }
+  .howwedo-item h4 {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .howwedo-item p {
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 19px;
+  }
 }
 
 /* Команда */
